@@ -4,7 +4,7 @@ import web
 import lxml
 import time
 import os
-import urllib,json
+import urllib2,json
 from lxml import etree
 
 class WeixinInterface:
