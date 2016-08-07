@@ -70,5 +70,5 @@ class WeixinInterface:
         fromUser=xml.find("FromUserName").text
         toUser=xml.find("ToUserName").text        
         Nword = youdao(content)        
-        return self.render.reply_text(fromUser,toUser,int(time.time()),Nword)
+        return self.render.reply_text(fromUser,toUser,int(time.time()),content)
         
