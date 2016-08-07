@@ -34,7 +34,8 @@ class WeixinInterface:
         #如果是来自微信的请求，则回复echostr
         if hashcode == signature:
             return echostr
-
+        
+        
     def youdao(word):
         qword = urllib2.quote(word)
         baseurl =r'http://fanyi.youdao.com/openapi.do?keyfrom=captainavatar&key=750408061&type=data&doctype=json&version=1.1&q='
@@ -55,7 +56,8 @@ class WeixinInterface:
         elif fanyi['errorCode'] == 40:
             return u'对不起，不支持的语言类型'
         else:
-            return u'对不起，您输入的单词%s无法翻译,请检查拼写'% word   
+            return u'对不起，您输入的单词%s无法翻译,请检查拼写'% word        
+    
             
     def POST(self):        
         str_xml = web.data() #获得post来的数据
